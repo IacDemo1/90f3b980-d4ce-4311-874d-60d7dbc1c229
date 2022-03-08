@@ -74,7 +74,7 @@ resource "aws_nat_gateway" "km_nat_gateway" {
 }
 
 # Create a new route table for the private subnets
-# And make it route non-local traffic through the NAT gateway to the internet
+# And make it route non-local traffic through the NAT gateway to the internet check
 resource "aws_route_table" "km_route_table" {
   count  = var.az_count
   vpc_id = aws_vpc.km_vpc.id
